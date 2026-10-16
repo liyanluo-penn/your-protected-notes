@@ -1,13 +1,8 @@
 {
   "mcpServers": {
-    "playwright": {
-      "command": "npx",
-      "args": [
-        "@playwright/mcp@latest",
-        "--caps=devtools",
-        "--headless",
-        "--browser=chromium"
-      ]
+    "protected-notes": {
+      "type": "http",
+      "url": "https://your-protected-notes-0voz.onrender.com/mcp"
     }
   }
 }

@@ -1,5 +1,27 @@
 # your-protected-notes
 
+## Liyan's Session 7 deployment
+
+Created from `jlumbroso/your-protected-notes` using **Use this template**, not a
+fork. The deployed connector is:
+
+`https://your-protected-notes-0voz.onrender.com/mcp`
+
+The service runs on Render's free plan with Neon Postgres and Managed Better
+Auth. [`.mcp.json`](.mcp.json) configures the deployed connector for Claude Code.
+Sign into the connector and call `user_status` before saving private notes.
+
+Live verification on 2026-10-15 passed guest writes, reads in a new MCP session,
+invalid-token rejection, a real user login, private writes and reads, and
+exclusion of private notes from the guest list. Test-created notes were cleaned
+up without clearing existing data.
+
+The personal show-and-tell extension is the
+[private assignment deadline assistant](https://github.com/liyanluo-penn/your-first-instrument).
+See its [Chinese assignment guide](https://github.com/liyanluo-penn/your-first-instrument/blob/main/docs/SESSION-7-RESULTS.md).
+
+## Instructor template
+
 **An MCP server that knows who is asking.** Minimal Neon Auth prototype:
 one `notes` table, four tools, three modes —
 
