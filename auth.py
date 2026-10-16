@@ -22,7 +22,8 @@ import urllib.request
 from starlette.requests import Request
 from starlette.responses import HTMLResponse, JSONResponse, RedirectResponse
 
-ISSUER = os.environ.get("PUBLIC_URL", "https://your-protected-notes.onrender.com").rstrip("/")
+ISSUER = (os.environ.get("PUBLIC_URL") or os.environ.get("RENDER_EXTERNAL_URL")
+          or "http://127.0.0.1:8000").rstrip("/")
 # Provider detection (2026-10-08: Neon moved new projects from Stack-based
 # "Neon Auth" to Managed Better Auth — docs/NEON-AUTH-TRANSITION.md).
 # NEON_AUTH_BASE_URL present => better_auth; otherwise legacy Stack.
